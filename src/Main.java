@@ -26,5 +26,8 @@ public class Main {
         phoneBook.addContact("Алла котята", "81231232323");
         phoneBook.addContact("Инна туроператор", "89899898989");
         System.out.println(phoneBook);
+        System.out.println();
     }
+
+
 }
