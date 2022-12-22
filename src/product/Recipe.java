@@ -2,13 +2,12 @@ package product;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
 
 public final class Recipe {
     private final Map<Product, Integer> products = new HashMap<>();
     private final String recipeName;
-    //private int costProducts;
+
 
     public Recipe(String recipeName) {
         this.recipeName = recipeName;
@@ -48,20 +47,7 @@ public final class Recipe {
         }
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Recipe recipe = (Recipe) o;
-        return Objects.equals(recipeName, recipe.recipeName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(products, recipeName);
-    }
-
-    public void addRecipe(Set<Recipe> recipeSet) {
+    public void addRecipeToRecipeBook(Set<Recipe> recipeSet) {
         if (!recipeSet.contains(this)) {
             recipeSet.add(this);
         } else {

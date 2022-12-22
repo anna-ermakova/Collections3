@@ -63,9 +63,6 @@ public class Product {
         }
     }
 
-    public void remove(Product product) {
-        product.remove(product);
-    }
 
     @Override
     public String toString() {
@@ -81,12 +78,12 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Objects.equals(name, product.name) && Objects.equals(price, product.price);
+        return Objects.equals(name, product.name) && Objects.equals(mass, product.mass);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, price);
+        return Objects.hash(name, mass);
     }
 }
 

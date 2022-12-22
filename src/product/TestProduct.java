@@ -33,10 +33,11 @@ public class TestProduct {
         Recipe bananInEgg = new Recipe("Банан в яйце");
         Recipe omlet = new Recipe("омлет");
         Recipe sandwich = new Recipe("хлеб с маслом");
-        omlet.addRecipe(recipeBook);
-        sandwich.addRecipe(recipeBook);
+        omlet.addRecipeToRecipeBook(recipeBook);
+        sandwich.addRecipeToRecipeBook(recipeBook);
         System.out.println(recipeBook);
         System.out.println(omlet.getTotalCostAllProducts());
+
 
     }
 }
